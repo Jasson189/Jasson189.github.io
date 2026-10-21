@@ -1,164 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jasson Mazariegos | Portfolio</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-    font-family:Segoe UI,Arial,sans-serif;
-    background:#050816;
-    color:white;
-    line-height:1.6;
-}
-header{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(135deg,#050816,#0f172a);
-}
-h1{
-    font-size:4rem;
-    margin-bottom:10px;
-}
-.highlight{color:#38bdf8}
-.subtitle{
-    font-size:1.3rem;
-    color:#cbd5e1;
-}
-.btn{
-    margin-top:25px;
-    padding:12px 25px;
-    border:1px solid #38bdf8;
-    border-radius:30px;
-    color:#38bdf8;
-    text-decoration:none;
-}
-section{
-    max-width:1100px;
-    margin:auto;
-    padding:80px 20px;
-}
-h2{
-    color:#38bdf8;
-    margin-bottom:20px;
-}
-.card{
-    background:#0f172a;
-    padding:25px;
-    border-radius:15px;
-    margin:15px 0;
-    border:1px solid #1e293b;
-}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-}
-.skill{
-    display:inline-block;
-    background:#1e293b;
-    padding:10px 15px;
-    border-radius:20px;
-    margin:5px;
-}
-footer{
-    text-align:center;
-    padding:30px;
-    color:#94a3b8;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e1d">
+  <meta name="description" content="Portafolio de Jasson Mazariegos: proyectos web, APIs, bases de datos, automatización y desarrollo de software.">
+  <meta property="og:title" content="Jasson Mazariegos | Desarrollo Web & Software">
+  <meta property="og:description" content="Proyectos reales y académicos en desarrollo web, backend, bases de datos y automatización.">
+  <meta property="og:type" content="website">
+  <title>Jasson Mazariegos · Desarrollador Web | Portafolio</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080e1d;--panel:#101a2d;--panel2:#141f33;--line:#26354f;--txt:#e9f1ff;--muted:#a3b4cf;--blue:#66dcfa;--purple:#ae9fff;--green:#71e6b5;--shadow:0 24px 70px rgba(0,0,0,.22)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65}a{color:inherit}button{font:inherit}::selection{background:#2e687d;color:#fff}
+    .skip{position:absolute;left:12px;top:-100px;z-index:100;background:white;color:#08101d;padding:10px 18px;border-radius:8px}.skip:focus{top:8px}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(8,14,29,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(107,142,194,.18)}
+    .wrap{width:min(1160px,calc(100% - 48px));margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;min-height:74px;gap:20px}.logo{font-size:21px;text-decoration:none;font-weight:850;letter-spacing:-1.3px}.logo b{color:var(--blue)}.logo small{color:#88a9c4;font-weight:500;font-size:12px;letter-spacing:.03em;margin-left:6px}
+    .nav-links{display:flex;align-items:center;gap:28px}.nav-links a{text-decoration:none;font-weight:600;color:#c0cde0;font-size:13px;transition:color .18s}.nav-links a:hover{color:var(--blue)}.nav-links .nav-contact{border:1px solid #426482;padding:9px 15px;border-radius:9px;color:var(--txt)}
+    .hero{position:relative;overflow:hidden;padding:106px 0 100px;background:radial-gradient(circle at 75% 10%,rgba(70,63,155,.23),transparent 38%),radial-gradient(circle at 3% 24%,rgba(37,171,194,.12),transparent 35%)}.hero:before{content:"";position:absolute;inset:0;opacity:.24;background-image:radial-gradient(#5b7398 .8px,transparent .8px);background-size:30px 30px;mask-image:linear-gradient(90deg,transparent 28%,black 100%);pointer-events:none}
+    .hero-layout{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:760;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}.signal{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 0 5px rgba(113,230,181,.13)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(47px,5.5vw,77px);line-height:1.09;letter-spacing:-.055em;margin:25px 0 25px;font-weight:850}h1 .gradient{background:linear-gradient(95deg,#76e1ff,#b6a4ff);background-clip:text;-webkit-background-clip:text;color:transparent}.hero-lead{font-size:18px;color:var(--muted);max-width:580px;margin-bottom:28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:740;font-size:14px;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--blue);color:#071622}.btn-primary:hover{background:#a4edff}.btn-secondary{border:1px solid #3b5276;background:rgba(30,44,69,.48);color:var(--txt)}.btn-secondary:hover{background:#243752}.small-note{display:flex;gap:10px;align-items:center;font-size:13px;color:#95acc5}.small-note .dot{background:#415f81;height:4px;width:4px;border-radius:50%}
+    .terminal{box-shadow:var(--shadow);border:1px solid #35496b;border-radius:16px;overflow:hidden;background:linear-gradient(160deg,#121e35,#0b1427);transform:rotate(1deg)}.terminal-bar{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;background:#17243d;border-bottom:1px solid #2a3a58;font-size:12px;color:#96adc9}.lights{display:flex;gap:7px}.lights i{width:10px;height:10px;border-radius:50%;display:block;background:#fd847b}.lights i:nth-child(2){background:#ffca72}.lights i:nth-child(3){background:#75d7a1}.code{font:13px/1.95 ui-monospace,SFMono-Regular,Consolas,monospace;padding:24px 26px 29px;color:#cfdbeb;white-space:pre-wrap;overflow-wrap:anywhere}.code .c{color:#788ba8}.code .k{color:#ad9afa}.code .s{color:#79e2bb}.code .a{color:#7bdcfe}.code .d{color:#ffcf8d}.terminal-foot{border-top:1px solid #223854;background:#101c30;padding:13px 22px;display:flex;justify-content:space-between;gap:5px;font-size:11px;color:#8abcae}.terminal-foot span:last-child{color:#9bafcb}
+    section.content-section{padding:86px 0}.section-overline{color:var(--blue);font-size:12px;letter-spacing:.16em;font-weight:760;text-transform:uppercase;margin-bottom:12px}.section-title{font-size:clamp(29px,3.5vw,43px);letter-spacing:-.038em;line-height:1.17;margin-bottom:13px}.section-intro{color:var(--muted);font-size:16px;max-width:740px;margin-bottom:34px}.divider{border-top:1px solid rgba(104,129,170,.18)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.about-card{background:linear-gradient(145deg,#101b2e,#10192c);border:1px solid var(--line);border-radius:15px;padding:28px}.about-card .card-icon{font-size:25px;margin-bottom:18px}.about-card h3{font-size:20px;letter-spacing:-.025em;margin-bottom:9px}.about-card p{color:var(--muted);font-size:14px;margin-bottom:0}
+    .filters{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 28px}.filter{border:1px solid #334766;border-radius:30px;padding:9px 15px;background:#101b2c;color:#b9cbe1;font-size:13px;font-weight:710;cursor:pointer;transition:background .15s,border-color .15s}.filter:hover{border-color:#84c5e0}.filter[aria-pressed="true"]{background:#143950;border-color:#59cde9;color:#9aeeff}
+    .projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}.project{background:linear-gradient(155deg,#121e32,#0d1629);border:1px solid var(--line);border-radius:17px;overflow:hidden;display:flex;flex-direction:column;min-height:355px;transition:transform .15s,border-color .15s,box-shadow .15s}.project:hover{transform:translateY(-4px);border-color:#5d799c;box-shadow:0 18px 55px rgba(0,0,0,.13)}.project[hidden]{display:none}.project-featured{border-color:#426983}.project-art{height:105px;display:flex;align-items:center;justify-content:space-between;padding:18px 23px;background:radial-gradient(circle at 90% -20%,rgba(124,139,255,.21),transparent 55%),linear-gradient(110deg,#18364d,#132238)}.project-art.violet{background:radial-gradient(circle at 90% 0%,rgba(138,99,239,.24),transparent 55%),linear-gradient(110deg,#2b264f,#181e37)}.project-art.teal{background:radial-gradient(circle at 90% 0%,rgba(68,219,191,.19),transparent 55%),linear-gradient(110deg,#133b43,#15273a)}.project-art.orange{background:radial-gradient(circle at 90% 0%,rgba(252,175,107,.16),transparent 60%),linear-gradient(110deg,#382a36,#192239)}.project-symbol{font-size:39px;filter:saturate(.86)}.project-art .serial{font-size:12px;letter-spacing:.12em;color:#c0cee6;font-family:Consolas,monospace}.project-body{padding:22px 23px 21px;display:flex;flex-direction:column;flex:1}.type-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.105em;font-weight:800;color:#8edccf;margin-bottom:10px}.project h3{font-size:18px;line-height:1.33;letter-spacing:-.02em;margin-bottom:10px}.project p{color:#a7b8ce;font-size:13.2px;line-height:1.65;margin-bottom:17px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}.tag{font-size:10px;color:#bcd7ed;background:#1e2d44;border:1px solid #2d405a;padding:4px 8px;border-radius:5px}.project-actions{border-top:1px solid rgba(110,142,185,.18);margin-top:19px;padding-top:15px;display:flex;justify-content:space-between;align-items:center;gap:10px}.project-link{color:#91e5fb;font-size:13px;font-weight:720;text-decoration:none}.project-link:hover{text-decoration:underline}.project-muted{font-size:11px;color:#8fa3bd}.status{font-size:10px;color:#b6cbe1}.empty{display:none;color:var(--muted);padding:20px 0}.empty.show{display:block}
+    .skills-layout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.skill-group{background:#111c30;border:1px solid var(--line);border-radius:15px;padding:25px}.skill-group h3{font-size:16px;margin-bottom:16px}.skill-list{display:flex;gap:8px;flex-wrap:wrap}.skill-pill{border:1px solid #32415c;border-radius:7px;background:#1b2a41;padding:7px 10px;color:#c5d8ea;font-size:12px}
+    .callout{border:1px solid #3b5575;border-radius:18px;padding:40px;background:radial-gradient(circle at 100% 0%,rgba(103,125,234,.18),transparent 50%),#111e32;display:flex;align-items:center;justify-content:space-between;gap:25px}.callout h2{font-size:30px;line-height:1.2;letter-spacing:-.03em;margin-bottom:10px}.callout p{color:var(--muted);max-width:670px;margin-bottom:0}.callout .btn{flex-shrink:0}footer{border-top:1px solid rgba(104,129,170,.18);padding:30px 0;color:#90a4be;font-size:12px}footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}footer a{color:#b6d4e9;text-decoration:none}footer a:hover{text-decoration:underline}
+    :focus-visible{outline:3px solid #74dffb;outline-offset:4px}@media(max-width:1030px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-layout{gap:30px}.code{font-size:11px}}@media(max-width:720px){.wrap{width:min(100% - 34px,1160px)}.site-header{position:relative}.nav{align-items:flex-start;flex-direction:column;justify-content:center;padding:17px 0;gap:10px}.nav-links{gap:16px;flex-wrap:wrap}.nav-links a{font-size:12px}.hero{padding:63px 0}.hero-layout{grid-template-columns:1fr}.hero h1{font-size:clamp(42px,11vw,58px)}.hero-lead{font-size:16px}.terminal{transform:none}.about-grid,.skills-layout,.projects{grid-template-columns:1fr}.project{min-height:325px}.content-section{padding:60px 0!important}.callout{padding:26px;align-items:flex-start;flex-direction:column}.callout h2{font-size:25px}.callout .btn{width:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+  </style>
 </head>
 <body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div class="site-header">
+    <nav class="nav wrap" aria-label="Navegación principal">
+      <a class="logo" href="#inicio" aria-label="Jasson Mazariegos, inicio">JM<b>.</b> <small>/ portafolio</small></a>
+      <div class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a class="nav-contact" href="https://github.com/Jasson189" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </div>
 
-<header>
-    <h1>Jasson <span class="highlight">Mazariegos</span></h1>
-    <p class="subtitle">Systems Engineering Student • Cybersecurity Enthusiast</p>
-    <a href="#proyectos" class="btn">Ver Proyectos</a>
-</header>
-
-<section>
-    <h2>👨‍💻 Sobre mí</h2>
-    <div class="card">
-        <p>
-        Soy estudiante de Ingeniería en Sistemas en Guatemala con interés en
-        ciberseguridad, desarrollo de software, automatización, bases de datos
-        y tecnologías emergentes. Mi objetivo es especializarme en seguridad
-        informática y participar en proyectos tecnológicos de alto impacto.
-        </p>
-    </div>
-</section>
-
-<section id="proyectos">
-    <h2>🚀 Proyectos</h2>
-
-    <div class="grid">
-        <div class="card">
-            <h3>Sistema de Garita de Seguridad</h3>
-            <p>Aplicación para control y registro de accesos en residenciales.</p>
-            <br>
-            <strong>Tecnologías:</strong>
-            <p>Python • FastAPI • PostgreSQL • SQLAlchemy</p>
+  <main id="contenido">
+    <header class="hero" id="inicio">
+      <div class="wrap hero-layout">
+        <div>
+          <div class="eyebrow"><span class="signal" aria-hidden="true"></span> Ingeniería en Sistemas · Guatemala</div>
+          <h1>Hola, soy Jasson.<br><span class="gradient">Creo soluciones<br>con código.</span></h1>
+          <p class="hero-lead">Desarrollador web en formación, con experiencia práctica en interfaces, APIs, bases de datos y automatización. Me gusta convertir necesidades reales en herramientas útiles.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="https://github.com/Jasson189" target="_blank" rel="noopener noreferrer">Ver mi GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="small-note"><span>Frontend & Backend</span><i class="dot"></i><span>SQL & APIs</span><i class="dot"></i><span>Automatización</span></div>
         </div>
+        <div class="terminal" aria-label="Tarjeta visual de tecnologías que utilizo">
+          <div class="terminal-bar"><div class="lights" aria-hidden="true"><i></i><i></i><i></i></div><span>perfil.dev</span><span>● en aprendizaje continuo</span></div>
+          <div class="code"><span class="c">// Lo que construyo</span>
+<span class="k">const</span> <span class="a">desarrollador</span> = {
+  nombre: <span class="s">"Jasson Mazariegos"</span>,
+  enfoque: [
+    <span class="s">"Desarrollo web"</span>,
+    <span class="s">"Backend y APIs"</span>,
+    <span class="s">"Bases de datos"</span>
+  ],
+  herramientas: [<span class="s">"JavaScript"</span>,
+    <span class="s">"Python"</span>, <span class="s">"SQL"</span>],
+  objetivo: <span class="d">"Aprender y aportar"</span>
+};
 
-        <div class="card">
-            <h3>Conversor de Divisas</h3>
-            <p>Aplicación desarrollada en Java para conversión de monedas.</p>
-            <br>
-            <strong>Tecnologías:</strong>
-            <p>Java • NetBeans</p>
+<span class="a">construir</span>(<span class="d">ideas</span>); <span class="c">// → soluciones</span></div>
+          <div class="terminal-foot"><span>✓ Curiosidad + práctica</span><span>UTF-8 · ES</span></div>
         </div>
+      </div>
+    </header>
 
-        <div class="card">
-            <h3>Métodos Numéricos</h3>
-            <p>Implementación de algoritmos matemáticos y análisis numérico.</p>
-            <br>
-            <strong>Tecnologías:</strong>
-            <p>C++ • Visual Studio</p>
+    <section class="content-section wrap" id="sobre-mi">
+      <div class="section-overline">01 / Perfil</div><h2 class="section-title">Tecnología aplicada a problemas reales.</h2>
+      <p class="section-intro">Soy estudiante de Ingeniería en Sistemas y he desarrollado proyectos académicos y personales, además de automatizaciones utilizadas para facilitar tareas de reportes y control de información.</p>
+      <div class="about-grid">
+        <div class="about-card"><div class="card-icon" aria-hidden="true">⌘</div><h3>Desarrollo de software</h3><p>Práctica con HTML, CSS, JavaScript, Python y Java. He trabajado en interfaces, servicios web, integración de bases de datos y validaciones.</p></div>
+        <div class="about-card"><div class="card-icon" aria-hidden="true">↗</div><h3>Automatización y análisis</h3><p>Experiencia aplicada optimizando controles de personal, reportes e indicadores mediante Excel avanzado, macros VBA, SQL y herramientas de análisis.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section divider" id="proyectos">
+      <div class="wrap">
+        <div class="section-overline">02 / Trabajo seleccionado</div><h2 class="section-title">Proyectos que cuentan lo que sé hacer.</h2>
+        <p class="section-intro">Aplicaciones con código público, desarrollos académicos y soluciones de automatización. Cada tarjeta indica claramente su contexto; las aplicaciones sin repositorio público no contienen enlaces inventados.</p>
+        <div class="filters" role="group" aria-label="Filtrar proyectos">
+          <button type="button" class="filter" data-filter="todos" aria-pressed="true">Todos <span id="total-proyectos">(11)</span></button>
+          <button type="button" class="filter" data-filter="web" aria-pressed="false">Web & APIs</button>
+          <button type="button" class="filter" data-filter="datos" aria-pressed="false">Bases de datos</button>
+          <button type="button" class="filter" data-filter="automatizacion" aria-pressed="false">Automatización</button>
+          <button type="button" class="filter" data-filter="academico" aria-pressed="false">Académicos</button>
         </div>
-
-        <div class="card">
-            <h3>Automatización de Reportes</h3>
-            <p>Optimización de procesos mediante Excel, Power Query y VBA.</p>
-            <br>
-            <strong>Tecnologías:</strong>
-            <p>Excel • Power Query • VBA</p>
+        <div class="projects" id="lista-proyectos">
+          <article class="project project-featured" data-category="web datos">
+            <div class="project-art"><span class="project-symbol" aria-hidden="true">🛡️</span><span class="serial">01 / FULL STACK</span></div>
+            <div class="project-body"><div class="type-label">Repositorio público · Aplicación web</div><h3>Sistema de Garita de Seguridad</h3><p>Aplicación de control de visitas para residencial: frontend web, API con autenticación JWT, registros de ingreso/salida y prerregistro con códigos QR.</p><div class="tags"><span class="tag">HTML/CSS/JS</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">JWT</span></div><div class="project-actions"><a class="project-link" href="https://github.com/Jasson189/Garita-de-Seguridad" target="_blank" rel="noopener noreferrer" aria-label="Ver el código del Sistema de Garita de Seguridad en GitHub">Ver código en GitHub ↗</a><span class="status">Proyecto base funcional</span></div></div>
+          </article>
+          <article class="project project-featured" data-category="web datos">
+            <div class="project-art violet"><span class="project-symbol" aria-hidden="true">💸</span><span class="serial">02 / FULL STACK</span></div>
+            <div class="project-body"><div class="type-label">Repositorio público · Prueba técnica</div><h3>Aplicación de Remesas</h3><p>Proyecto de práctica full-stack para una prueba técnica. El repositorio incluye estructura de frontend, backend y configuración de contenedores para desarrollo.</p><div class="tags"><span class="tag">Frontend</span><span class="tag">Backend</span><span class="tag">Docker Compose</span></div><div class="project-actions"><a class="project-link" href="https://github.com/Jasson189/remesas-app" target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio de la aplicación de remesas">Ver código en GitHub ↗</a><span class="status">Prueba técnica</span></div></div>
+          </article>
+          <article class="project" data-category="web academico">
+            <div class="project-art teal"><span class="project-symbol" aria-hidden="true">📈</span><span class="serial">03 / OPTIMIZACIÓN</span></div>
+            <div class="project-body"><div class="type-label">Proyecto académico · Módulo implementado</div><h3>Sistema Método Símplex</h3><p>Módulo web para ingresar funciones objetivo y restricciones: selección de maximización/minimización, formulario dinámico, validaciones y envío a API.</p><div class="tags"><span class="tag">HTML/CSS/JS</span><span class="tag">Python</span><span class="tag">FastAPI</span></div><div class="project-actions"><span class="project-muted">Código todavía no publicado</span><span class="status">Trabajo en equipo</span></div></div>
+          </article>
+          <article class="project" data-category="academico">
+            <div class="project-art violet"><span class="project-symbol" aria-hidden="true">🔀</span><span class="serial">04 / ALGORITMOS</span></div>
+            <div class="project-body"><div class="type-label">Proyecto académico · En desarrollo</div><h3>Autómatas Finitos Deterministas (AFD)</h3><p>Implementación orientada a objetos para definir estados, símbolos y transiciones, validar entradas y guardar o cargar archivos con formato .afd.</p><div class="tags"><span class="tag">Java</span><span class="tag">NetBeans</span><span class="tag">Maven</span></div><div class="project-actions"><span class="project-muted">Código todavía no publicado</span><span class="status">En desarrollo</span></div></div>
+          </article>
+          <article class="project" data-category="datos academico">
+            <div class="project-art"><span class="project-symbol" aria-hidden="true">⚽</span><span class="serial">05 / BASES DE DATOS</span></div>
+            <div class="project-body"><div class="type-label">Práctica académica</div><h3>Campeonato Universitario</h3><p>Diseño de una base de datos relacional para la gestión de un campeonato de fútbol: esquema, tablas, relaciones y consultas SQL.</p><div class="tags"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">phpMyAdmin</span></div><div class="project-actions"><span class="project-muted">Código todavía no publicado</span><span class="status">Práctica SQL</span></div></div>
+          </article>
+          <article class="project" data-category="automatizacion datos">
+            <div class="project-art teal"><span class="project-symbol" aria-hidden="true">📊</span><span class="serial">06 / DATOS</span></div>
+            <div class="project-body"><div class="type-label">Experiencia aplicada · Uso interno</div><h3>Dashboard de Indicadores de RR. HH.</h3><p>Tableros para seguimiento de movimientos de personal, análisis de ingresos y egresos y presentación de información mediante filtros e indicadores.</p><div class="tags"><span class="tag">Excel avanzado</span><span class="tag">Tablas dinámicas</span><span class="tag">KPI</span></div><div class="project-actions"><span class="project-muted">Sin código público por confidencialidad</span><span class="status">Aplicado al trabajo</span></div></div>
+          </article>
+          <article class="project" data-category="automatizacion">
+            <div class="project-art orange"><span class="project-symbol" aria-hidden="true">⚙️</span><span class="serial">07 / AUTOMATIZACIÓN</span></div>
+            <div class="project-body"><div class="type-label">Experiencia aplicada · Uso interno</div><h3>Control de Permisos y Trabajo Remoto</h3><p>Herramientas de consulta y seguimiento de permisos laborales y home office mediante formularios, validaciones, fórmulas y macros VBA.</p><div class="tags"><span class="tag">Excel</span><span class="tag">VBA</span><span class="tag">Automatización</span></div><div class="project-actions"><span class="project-muted">Sin código público por confidencialidad</span><span class="status">Aplicado al trabajo</span></div></div>
+          </article>
+          <article class="project" data-category="datos academico">
+            <div class="project-art violet"><span class="project-symbol" aria-hidden="true">🖧</span><span class="serial">08 / INFRAESTRUCTURA</span></div>
+            <div class="project-body"><div class="type-label">Laboratorio académico</div><h3>NovaTech · Infraestructura y SQL Server</h3><p>Entorno virtual de práctica empresarial: servidor Windows, servicios de red, administración de usuarios y una base de datos SQL Server con registros de empleados.</p><div class="tags"><span class="tag">VMware</span><span class="tag">Windows Server</span><span class="tag">SQL Server</span></div><div class="project-actions"><span class="project-muted">Documentación no publicada</span><span class="status">Laboratorio</span></div></div>
+          </article>
+          <article class="project" data-category="datos academico">
+            <div class="project-art teal"><span class="project-symbol" aria-hidden="true">🗃️</span><span class="serial">09 / SQL</span></div>
+            <div class="project-body"><div class="type-label">Práctica académica</div><h3>Inventario y Consultas Relacionales</h3><p>Ejercicios de diseño de entidades, relaciones y consultas en un entorno local MySQL, trabajando con tablas de productos, clientes y facturación.</p><div class="tags"><span class="tag">WAMP</span><span class="tag">MySQL</span><span class="tag">SQL</span></div><div class="project-actions"><span class="project-muted">Código todavía no publicado</span><span class="status">Práctica SQL</span></div></div>
+          </article>
+          <article class="project" data-category="academico">
+            <div class="project-art orange"><span class="project-symbol" aria-hidden="true">💱</span><span class="serial">10 / JAVA</span></div>
+            <div class="project-body"><div class="type-label">Ejercicio de programación</div><h3>Conversor de Divisas</h3><p>Programa de escritorio desarrollado como práctica para convertir importes entre distintas monedas mediante tipos de cambio ingresados.</p><div class="tags"><span class="tag">Java</span><span class="tag">NetBeans</span></div><div class="project-actions"><span class="project-muted">Código todavía no publicado</span><span class="status">Práctica</span></div></div>
+          </article>
+          <article class="project" data-category="academico">
+            <div class="project-art"><span class="project-symbol" aria-hidden="true">∑</span><span class="serial">11 / CÓMPUTO</span></div>
+            <div class="project-body"><div class="type-label">Ejercicio de programación</div><h3>Métodos Numéricos</h3><p>Implementación y práctica de métodos iterativos para aproximación de raíces y solución de problemas matemáticos, con control de tolerancias.</p><div class="tags"><span class="tag">C++</span><span class="tag">Visual Studio</span><span class="tag">Algoritmos</span></div><div class="project-actions"><span class="project-muted">Código todavía no publicado</span><span class="status">Práctica</span></div></div>
+          </article>
         </div>
-    </div>
-</section>
+        <p class="empty" role="status" id="sin-resultados">No hay proyectos en esta categoría.</p>
+      </div>
+    </section>
 
-<section>
-    <h2>🛠️ Habilidades</h2>
-    <div class="card">
-        <span class="skill">Python</span>
-        <span class="skill">Java</span>
-        <span class="skill">C++</span>
-        <span class="skill">SQL</span>
-        <span class="skill">PostgreSQL</span>
-        <span class="skill">MySQL</span>
-        <span class="skill">FastAPI</span>
-        <span class="skill">GitHub</span>
-        <span class="skill">Excel Avanzado</span>
-        <span class="skill">Power Query</span>
-    </div>
-</section>
+    <section class="content-section divider" id="habilidades"><div class="wrap">
+      <div class="section-overline">03 / Tecnologías</div><h2 class="section-title">Herramientas con las que he trabajado.</h2><p class="section-intro">Conocimientos adquiridos en proyectos propios, actividades académicas y automatizaciones aplicadas.</p>
+      <div class="skills-layout">
+        <div class="skill-group"><h3>🌐 Desarrollo web</h3><div class="skill-list"><span class="skill-pill">HTML5</span><span class="skill-pill">CSS3</span><span class="skill-pill">JavaScript</span><span class="skill-pill">Python</span><span class="skill-pill">FastAPI</span><span class="skill-pill">APIs REST</span></div></div>
+        <div class="skill-group"><h3>🗄️ Datos & programación</h3><div class="skill-list"><span class="skill-pill">SQL</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">MySQL</span><span class="skill-pill">SQL Server</span><span class="skill-pill">Java</span><span class="skill-pill">C++</span></div></div>
+        <div class="skill-group"><h3>🛠️ Herramientas</h3><div class="skill-list"><span class="skill-pill">Git / GitHub</span><span class="skill-pill">VS Code</span><span class="skill-pill">NetBeans</span><span class="skill-pill">Excel / VBA</span><span class="skill-pill">Power Query</span><span class="skill-pill">VMware</span></div></div>
+      </div>
+    </div></section>
 
-<section>
-    <h2>🎯 Objetivo Profesional</h2>
-    <div class="card">
-        Especializarme en Ciberseguridad y Desarrollo de Software, fortaleciendo
-        mis conocimientos en programación, análisis de datos, automatización y
-        seguridad informática.
-    </div>
-</section>
-
-<footer>
-    © 2026 Jasson Mazariegos | Cybersecurity & Software Development
-</footer>
-
+    <section class="content-section divider" id="contacto"><div class="wrap"><div class="callout"><div><div class="section-overline">04 / Próximo paso</div><h2>Busco mi primera oportunidad formal en desarrollo de software.</h2><p>Quiero aportar mis conocimientos, aprender de equipos con experiencia y seguir construyendo herramientas que resuelvan necesidades concretas.</p></div><a class="btn btn-primary" href="https://github.com/Jasson189" target="_blank" rel="noopener noreferrer">Explorar mi GitHub ↗</a></div></div></section>
+  </main>
+  <footer><div class="wrap"><span>© 2026 Jasson Mazariegos · Hecho con HTML, CSS y JavaScript.</span><span><a href="#inicio">Volver arriba ↑</a> &nbsp;·&nbsp; <a href="https://github.com/Jasson189" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div></footer>
+  <script>
+    (() => {
+      const buttons = [...document.querySelectorAll('[data-filter]')];
+      const projects = [...document.querySelectorAll('.project[data-category]')];
+      const total = document.getElementById('total-proyectos');
+      if(total) total.textContent = `(${projects.length})`;
+      buttons.forEach(button => button.addEventListener('click', () => {
+        const type = button.dataset.filter;
+        buttons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+        let visible = 0;
+        projects.forEach(project => {
+          const display = type === 'todos' || project.dataset.category.split(' ').includes(type);
+          project.hidden = !display;
+          if(display) visible++;
+        });
+        document.getElementById('sin-resultados').classList.toggle('show', visible === 0);
+      }));
+    })();
+  </script>
 </body>
 </html>
